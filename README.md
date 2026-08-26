@@ -26,26 +26,24 @@ The selected additional client problem is **Trust and Reliability**. The system 
 
 ## How the system works
 
-```mermaid
-flowchart TD
-    A[Customer login] --> B[Authenticated account scope]
-    B --> C[Customer question]
-    C --> D[LLM creates structured plan]
-    D --> E[Scoped data lookup]
-    D --> F[Semantic document search]
-    E --> G[Deterministic policy engine]
-    F --> G
-    G --> H{Action requested?}
-    H -- No --> I[Grounded answer]
-    H -- Yes --> J[Prepare pending action]
-    J --> I
-    I --> K[Validate answer and citations]
-    K --> L[Display answer, tools and sources]
-    L --> M{Pending action?}
-    M -- Confirm --> N[Execute local action]
-    M -- Cancel --> O[Cancel action]
-```
-
+`flowchart TD
+    A[Customer signs in] --> B[Backend verifies account scope]
+    B --> C[Customer sends a question]
+    C --> D[Groq creates a validated tool plan]
+    D --> E[Scoped customer data lookup]
+    E --> F[Deterministic policy and calculation engine]
+    F --> G[Semantic document search]
+    G --> H[Apply source precedence and detect conflicts]
+    H --> I{Action requested?}
+    I -- No --> J[Create grounded answer]
+    I -- Yes --> K[Prepare pending action]
+    K --> J
+    J --> L[Validate facts, citations and action state]
+    L --> M[Display answer, tool activity and sources]
+    M --> N{Pending action?}
+    N -- Confirm --> O[Execute local action]
+    N -- Cancel --> P[Cancel action]
+    
 ### Request processing
 
 1. The customer signs in.
