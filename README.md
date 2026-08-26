@@ -368,14 +368,9 @@ Open `http://127.0.0.1:8000`.
 
 ## Documentation
 
-- [`START_HERE.md`](START_HERE.md) - detailed beginner setup
 - [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md) - complete architecture and workflow
 - [`docs/PRODUCT_NOTE.md`](docs/PRODUCT_NOTE.md) - product decisions and roadmap
 - [`docs/AI_TOOL_USAGE.md`](docs/AI_TOOL_USAGE.md) - AI coding-tool disclosure
-- [`docs/TRUST_AND_RELIABILITY.md`](docs/TRUST_AND_RELIABILITY.md) - reliability controls
-- [`docs/TESTING.md`](docs/TESTING.md) - testing strategy
-- [`docs/SELF_DEPLOYMENT.md`](docs/SELF_DEPLOYMENT.md) - self-deployment steps
-- [`FINAL_AUDIT.md`](FINAL_AUDIT.md) - final assessment checklist
 
 ## Summary
 
