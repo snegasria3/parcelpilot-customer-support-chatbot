@@ -26,7 +26,7 @@ The selected additional client problem is **Trust and Reliability**. The system 
 
 ## How the system works
 
-`flowchart TD
+```flowchart TD
     A[Customer signs in] --> B[Backend verifies account scope]
     B --> C[Customer sends a question]
     C --> D[Groq creates a validated tool plan]
@@ -43,6 +43,7 @@ The selected additional client problem is **Trust and Reliability**. The system 
     M --> N{Pending action?}
     N -- Confirm --> O[Execute local action]
     N -- Cancel --> P[Cancel action]
+```
     
 ### Request processing
 
