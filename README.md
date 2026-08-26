@@ -26,7 +26,8 @@ The selected additional client problem is **Trust and Reliability**. The system 
 
 ## How the system works
 
-```flowchart TD
+```mermaid
+flowchart TD
     A[Customer signs in] --> B[Backend verifies account scope]
     B --> C[Customer sends a question]
     C --> D[Groq creates a validated tool plan]
