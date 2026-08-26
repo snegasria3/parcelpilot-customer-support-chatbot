@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Account-isolated, evidence-grounded ParcelPilot customer support" />
+    <title>ParcelPilot Customer Support</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 64 64%22><rect width=%2264%22 height=%2264%22 rx=%2216%22 fill=%22%231b4fff%22/><path d=%22M18 22 32 14l14 8v20l-14 8-14-8z%22 fill=%22white%22/><path d=%22m18 22 14 8 14-8M32 30v20%22 stroke=%22%231b4fff%22 stroke-width=%224%22 fill=%22none%22/></svg>" />
+    <link rel="stylesheet" href="/assets/styles.css" />
+  </head>
+  <body>
+    <div id="loading-screen" class="loading-screen" aria-live="polite">
+      <div class="brand-mark">P</div>
+      <span class="spinner"></span>
+      <p>Opening secure support…</p>
+    </div>
+
+    <main id="login-screen" class="login-shell hidden">
+      <section class="login-story">
+        <a class="brand brand-light" href="#" aria-label="ParcelPilot home">
+          <span class="brand-mark">P</span><span>PARCELPILOT</span>
+        </a>
+        <div class="story-content">
+          <p class="eyebrow">CUSTOMER SUPPORT · SYNTHETIC ASSESSMENT DATA</p>
+          <h1>Answers grounded in <em>your</em> account.</h1>
+          <p class="story-lead">Ask about an order, cancellation, pickup credit, ticket, support target, or documented issue. Every lookup stays inside the customer account that signed in.</p>
+          <div class="trust-list">
+            <article><span class="trust-icon">✓</span><div><strong>Account-isolated</strong><p>Other customers stay invisible at the backend and database layers.</p></div></article>
+            <article><span class="trust-icon">≡</span><div><strong>Authority-aware</strong><p>Active agreements override general policy when terms conflict.</p></div></article>
+            <article><span class="trust-icon">◎</span><div><strong>Evidence-first</strong><p>Exact calculations, source passages, and uncertainty remain inspectable.</p></div></article>
+          </div>
+        </div>
+        <div class="story-footer"><span></span> Trust &amp; Reliability controls active</div>
+      </section>
+
+      <section class="login-panel">
+        <div class="login-card">
+          <div class="mobile-brand brand"><span class="brand-mark">P</span><span>PARCELPILOT</span></div>
+          <div class="status-pill"><span></span> Customer access</div>
+          <h2>Welcome back</h2>
+          <p>Use one synthetic customer account to open its private support workspace.</p>
+
+          <form id="login-form" novalidate>
+            <label for="username">Customer ID</label>
+            <div class="input-wrap"><span>●</span><input id="username" name="username" autocomplete="username" placeholder="northstar" required /></div>
+            <label for="password">Password</label>
+            <div class="input-wrap"><span>◆</span><input id="password" name="password" type="password" autocomplete="current-password" placeholder="Enter password" required /></div>
+            <p id="login-error" class="form-error hidden" role="alert"></p>
+            <button id="login-button" class="primary-button" type="submit"><span>↗</span> Open secure support</button>
+          </form>
+
+          <div class="divider"><span>Demo customer accounts</span></div>
+          <div id="demo-accounts" class="demo-grid" aria-label="Synthetic demo accounts"></div>
+          <p class="demo-note">✓ All credentials and records are synthetic assessment data. Production authentication would use an identity provider.</p>
+        </div>
+      </section>
+    </main>
+
+    <main id="app-screen" class="app-shell hidden">
+      <header class="app-header">
+        <div class="brand"><span class="brand-mark">P</span><span>PARCELPILOT</span><small>CUSTOMER SUPPORT</small></div>
+        <div class="header-center"><span class="live-dot"></span><span id="header-account">Account workspace</span></div>
+        <button id="logout-button" class="ghost-button" type="button">Sign out ↗</button>
+      </header>
+
+      <aside class="account-rail">
+        <section class="account-card">
+          <div id="account-avatar" class="account-avatar">N</div>
+          <div><p class="label">SIGNED IN AS</p><h3 id="account-name">Customer</h3><p id="account-id">ACCT</p></div>
+        </section>
+        <section class="account-facts">
+          <div><span>Plan</span><strong id="account-plan">—</strong></div>
+          <div><span>Customer success</span><strong id="account-csm">—</strong></div>
+          <div><span>Agreement</span><strong id="account-agreement">—</strong></div>
+        </section>
+        <section class="quick-section">
+          <p class="label">TRY A QUESTION</p>
+          <div id="quick-prompts" class="quick-prompts"></div>
+        </section>
+        <section class="guardrail-card">
+          <div class="guardrail-heading"><span>✓</span><strong>Trust controls active</strong></div>
+          <p>Agreement precedence, scoped data, grounded citations, and action confirmation are enforced by code.</p>
+        </section>
+      </aside>
+
+      <section class="chat-panel">
+        <div class="chat-heading">
+          <div><p class="eyebrow dark">EVIDENCE-GROUNDED SUPPORT</p><h1>How can we help?</h1></div>
+          <div id="capability-badges" class="capability-badges"></div>
+        </div>
+        <div id="message-list" class="message-list" aria-live="polite"></div>
+        <div id="typing-indicator" class="typing hidden"><span></span><span></span><span></span><p>Checking your account and sources…</p></div>
+        <div class="composer-wrap">
+          <form id="chat-form" class="composer">
+            <textarea id="message-input" rows="1" maxlength="4000" placeholder="Ask about your order, ticket, policy, plan, or product issue…" aria-label="Support question"></textarea>
+            <button id="send-button" type="submit" aria-label="Send question">↑</button>
+          </form>
+          <p>Answers use only your scoped account data and supplied assessment sources. Actions require confirmation.</p>
+        </div>
+      </section>
+
+      <aside class="evidence-panel">
+        <div class="evidence-header"><div><p class="label">LIVE TRACE</p><h2>Reasoning evidence</h2></div><span id="trace-id" class="trace-id">—</span></div>
+        <div id="empty-evidence" class="empty-evidence"><span>⌁</span><h3>Evidence will appear here</h3><p>Ask a question to inspect tool activity, calculations, and authorized source passages.</p></div>
+        <div id="evidence-content" class="evidence-content hidden">
+          <section><h3>Tool activity</h3><ol id="tool-list" class="tool-list"></ol></section>
+          <section><h3>Source evidence</h3><div id="source-list" class="source-list"></div></section>
+        </div>
+      </aside>
+    </main>
+
+    <div id="action-modal" class="modal-backdrop hidden" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <section class="modal-card">
+        <div class="modal-icon">!</div>
+        <p class="eyebrow dark">CONFIRM BEFORE ACTION</p>
+        <h2 id="modal-title">Review pending action</h2>
+        <p id="modal-summary"></p>
+        <div class="pending-details"><span>Action ID</span><strong id="modal-action-id">—</strong><span>Status</span><strong>Not executed</strong></div>
+        <p class="modal-warning">Confirmation creates a local assessment record. Cancel leaves all data unchanged.</p>
+        <div class="modal-actions"><button id="cancel-action" class="secondary-button" type="button">Cancel action</button><button id="confirm-action" class="primary-button" type="button">Confirm action</button></div>
+      </section>
+    </div>
+
+    <div id="toast" class="toast hidden" role="status"></div>
+    <script src="/assets/app.js" defer></script>
+  </body>
+</html>

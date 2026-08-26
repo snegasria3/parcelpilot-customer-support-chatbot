@@ -1,0 +1,15 @@
+.env
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+runtime/*
+!runtime/.gitkeep
+*.log
+*.ses
+.DS_Store
+.idea/
+.vscode/settings.json

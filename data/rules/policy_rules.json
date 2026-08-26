@@ -1,0 +1,68 @@
+{
+  "source_precedence": [
+    "active_customer_agreement",
+    "current_policy_or_sop",
+    "current_product_documentation",
+    "structured_operational_fact",
+    "historical_ticket_context",
+    "deprecated_policy"
+  ],
+  "dataset_snapshot": "2026-08-16 11:00 Asia/Kolkata",
+  "support": {
+    "source_file": "01_Support_Policy_v3_CURRENT.pdf",
+    "citation_section": "2. Severity definitions; 3. Default first-response targets; 4. Escalation",
+    "severity": {
+      "P1": "Complete production outage preventing all shipment creation, confirmed security incident, suspected credential exposure, or immediate material business risk with no workaround.",
+      "P2": "Major feature unavailable or materially degraded while core operations remain possible or a workaround exists.",
+      "P3": "Minor defect, how-to question, configuration request, or limited operational impact."
+    },
+    "default_targets": {
+      "Enterprise": {"P1": {"minutes": 30, "coverage": "24x7"}, "P2": {"label": "2 hours"}, "P3": {"label": "1 business day"}},
+      "Growth": {"P1": {"label": "2 business hours"}, "P2": {"label": "4 business hours"}, "P3": {"label": "2 business days"}},
+      "Standard": {"P1": {"label": "4 business hours"}, "P2": {"label": "1 business day"}, "P3": {"label": "2 business days"}}
+    }
+  },
+  "cancellation": {
+    "source_file": "03_Cancellation_and_Service_Credit_SOP_v4.pdf",
+    "citation_section": "1. Order cancellation",
+    "booked_free_minutes": 30,
+    "booked_fee_inr": 250,
+    "picked_up_action": "return-to-origin",
+    "delivered_cancellable": false
+  },
+  "service_credit": {
+    "source_file": "03_Cancellation_and_Service_Credit_SOP_v4.pdf",
+    "citation_section": "2. Failed-pickup service credits; 3. Approval and uncertainty",
+    "default": {"delay_hours_strictly_more_than": 2, "fixed_inr": null, "max_inr": 500, "fee_percentage": 0.10},
+    "manager_approval_above_inr": 1000
+  },
+  "agreements": {
+    "ACCT-001": {
+      "source_file": "05_Northstar_Logistics_Enterprise_Agreement.pdf",
+      "status": "ACTIVE",
+      "valid_from": "2026-01-01",
+      "valid_to": "2026-12-31",
+      "support_targets": {
+        "P1": {"minutes": 15, "coverage": "24x7"},
+        "P2": {"label": "1 hour"},
+        "P3": {"label": "8 business hours"}
+      },
+      "booked_cancellation_fee_waived": true,
+      "monthly_credit_cap_inr": 5000
+    },
+    "ACCT-002": {
+      "source_file": "06_LumenWorks_Service_Agreement.pdf",
+      "status": "ACTIVE",
+      "valid_from": "2026-03-01",
+      "valid_to": "2027-02-28",
+      "support_targets": {
+        "P1": {"label": "2 business hours"},
+        "P2": {"label": "4 business hours"},
+        "P3": {"label": "2 business days"}
+      },
+      "booked_cancellation_fee_waived": false,
+      "service_credit": {"delay_hours_strictly_more_than": 4, "fixed_inr": 300, "max_inr": null, "fee_percentage": null},
+      "coverage_note": "No weekend or after-hours support coverage."
+    }
+  }
+}

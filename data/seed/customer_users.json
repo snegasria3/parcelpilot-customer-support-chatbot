@@ -1,0 +1,34 @@
+[
+  {
+    "user_id": "USR-CUST-001",
+    "username": "northstar",
+    "display_name": "Northstar Customer",
+    "account_id": "ACCT-001",
+    "password_hash": "$2b$12$AcdjKneH3JQjFLsae6NFYeJ/mF3RETP24MRxCmG81rgIoButQj4z6",
+    "is_active": true
+  },
+  {
+    "user_id": "USR-CUST-002",
+    "username": "lumenworks",
+    "display_name": "LumenWorks Customer",
+    "account_id": "ACCT-002",
+    "password_hash": "$2b$12$QUy2vxuD9x.i4GHjwz96EeYF6T3MV5Gh/rL2NyfD.JTuK20jva2LK",
+    "is_active": true
+  },
+  {
+    "user_id": "USR-CUST-003",
+    "username": "beacon",
+    "display_name": "Beacon Retail Customer",
+    "account_id": "ACCT-003",
+    "password_hash": "$2b$12$xluJztGV5EvPibJBL61.uOW9Cw9ISgVX1g6L7hnPBNKWxGx8KsK16",
+    "is_active": true
+  },
+  {
+    "user_id": "USR-CUST-004",
+    "username": "axis",
+    "display_name": "Axis Labs Customer",
+    "account_id": "ACCT-004",
+    "password_hash": "$2b$12$.xK2oXpDMWKzQcULovseOe/NDlgWMdaaViswgZ188x2qcbvqODvLS",
+    "is_active": true
+  }
+]

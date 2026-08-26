@@ -1,0 +1,57 @@
+[
+  {
+    "file_name": "01_Support_Policy_v3_CURRENT.pdf",
+    "title": "ParcelPilot Support Policy v3",
+    "document_type": "current_policy",
+    "status": "CURRENT",
+    "authority": "current_policy",
+    "authority_rank": 90,
+    "account_id": ""
+  },
+  {
+    "file_name": "02_Support_Policy_v2_DEPRECATED.pdf",
+    "title": "ParcelPilot Support Policy v2",
+    "document_type": "deprecated_policy",
+    "status": "DEPRECATED",
+    "authority": "deprecated_history_only",
+    "authority_rank": 5,
+    "account_id": ""
+  },
+  {
+    "file_name": "03_Cancellation_and_Service_Credit_SOP_v4.pdf",
+    "title": "Cancellation and Service Credit SOP v4",
+    "document_type": "current_sop",
+    "status": "CURRENT",
+    "authority": "current_sop",
+    "authority_rank": 90,
+    "account_id": ""
+  },
+  {
+    "file_name": "04_Product_Operations_Guide_and_Known_Issues.pdf",
+    "title": "Product Operations Guide and Known Issues",
+    "document_type": "current_product_guide",
+    "status": "CURRENT",
+    "authority": "current_product_documentation",
+    "authority_rank": 80,
+    "account_id": ""
+  },
+  {
+    "file_name": "05_Northstar_Logistics_Enterprise_Agreement.pdf",
+    "title": "Northstar Logistics Enterprise Agreement",
+    "document_type": "agreement",
+    "status": "ACTIVE",
+    "authority": "active_customer_agreement",
+    "authority_rank": 100,
+    "account_id": "ACCT-001"
+  },
+  {
+    "file_name": "06_LumenWorks_Service_Agreement.pdf",
+    "title": "LumenWorks Service Agreement",
+    "document_type": "agreement",
+    "status": "ACTIVE",
+    "authority": "active_customer_agreement",
+    "authority_rank": 100,
+    "account_id": "ACCT-002"
+  }
+]
+
